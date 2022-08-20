@@ -1,0 +1,23 @@
+1. radianToDegree
+2. isJavaScriptFile
+3.oilPrice
+/*
+disel --->114;
+petrol--->130;
+octen ---> 135;
+*/
+
+4.publicBusFare
+/*
+reserved bus ---->50;
+microbus -------->11;
+rest pepole will go public bus
+pepole:65;
+bus remingig ---->15
+microbus -------->4
+public bus ------->4
+
+5. isBestFriend02
+
+
+*/
