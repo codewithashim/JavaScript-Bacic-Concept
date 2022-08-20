@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deligate</title>
+  </head>
+  <body>
+    <section>
+      <ul id="list_container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Accusamus, sunt ullam.</li>
+        <li class="item">Facere, repudiandae consequuntur!</li>
+        <li class="item">Ratione, quo quaerat?</li>
+        <li class="item">Numquam, architecto expedita.</li>
+        <li class="item">Quos, aut iure.</li>
+      </ul>
+      <button id="addItem">Add Item</button>
+    </section>
+
+    <script>
+      //const items = document.getElementsByClassName("item");
+      //for (const item of items) {
+      //  item.addEventListener("click", function (event) {
+      //console.log(event.target.parentNode);
+      //      event.target.parentNode.removeChild(event.target);
+      //      });
+      //      }
+
+      document
+        .getElementById("list_container")
+        .addEventListener("click", function (event) {
+          console.log(event.target);
+          event.target.parentNode.removeChild(event.target);
+        });
+      //console.log(items);
+
+      document.getElementById("addItem").addEventListener("click", function () {
+        const listContainer = document.getElementById("list_container");
+        const li = document.createElement("li");
+        li.innerText = "Onether Item";
+        li.classList.add("item");
+        listContainer.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

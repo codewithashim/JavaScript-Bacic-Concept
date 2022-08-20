@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bubbele</title>
+
+    <style>
+      ul {
+        border: 2px solid black;
+      }
+      li {
+        cursor: pointer;
+        padding: 0.5rem;
+        border: 2px solid aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Expolring Bubble</h1>
+    <section id="list_container">
+      <ul id="list_ul">
+        <li id="item1">Lorem, ipsum.</li>
+        <li id="item2">Non, distinctio.</li>
+        <li id="item3">Repudiandae, exercitationem?</li>
+        <li id="item4">Dolores, quisquam.</li>
+        <li id="item5">Magni, numquam!</li>
+        <li id="item6">Quod, accusantium.</li>
+      </ul>
+    </section>
+
+    <script>
+      document
+        .getElementById("item2")
+        .addEventListener("click", function (event) {
+          console.log("hello");
+          //event.stopPropagation()
+          event.stopImmediatePropagation();
+        });
+      document
+        .getElementById("item2")
+        .addEventListener("click", function (event) {
+          console.log("hello");
+          //event.stopPropagation()
+          event.stopImmediatePropagation();
+        });
+      document
+        .getElementById("item2")
+        .addEventListener("click", function (event) {
+          console.log("hello");
+          //event.stopPropagation()
+          //event.stopImmediatePropagation();
+        });
+      document
+        .getElementById("item2")
+        .addEventListener("click", function (event) {
+          console.log("hello");
+          //event.stopPropagation()
+          //event.stopImmediatePropagation();
+        });
+
+      document.getElementById("list_ul").addEventListener("click", function () {
+        console.log("clecked");
+      });
+      document
+        .getElementById("list_container")
+        .addEventListener("click", function () {});
+    </script>
+  </body>
+</html>

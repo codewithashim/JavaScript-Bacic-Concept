@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="srcrit_info">My details</h1>
+    <input type="text" placeholder="pless enter delete" id="delete_conf" />
+    <button id="btn_delet" disabled>Delete</button>
+
+    <script>
+      document
+        .getElementById("delete_conf")
+        .addEventListener("keyup", function () {
+          const text = event.target.value;
+          const deletBtn = document.getElementById("btn_delet");
+
+          if (text === "delete") {
+            deletBtn.removeAttribute("disabled");
+          } else {
+            deletBtn.setAttribute("disabled", true);
+          }
+        })
+
+        .getElementById("btn_delet")
+        .addEventListener("click", function () {
+          const secret = document.getElementById("srcrit_info");
+          secret.style.display = "none";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js dom even</title>
+  </head>
+  <body>
+    <h1>Final Dom Even</h1>
+    <h3 id="HendelarStatus"></h3>
+    <button onclick="hendelOnClick()">Even Hendelar</button>
+
+    <h3 id="heandelStatus"></h3>
+    <button id="event_litenar">Add Event</button>
+
+    <p id="input_text">Difult Update text</p>
+    <input type="text" id="inputData" />
+    <button id="update">Update</button>
+
+    <script>
+      //method 1=======================================
+      function hendelOnClick() {
+        const hendlarStatus = document.getElementById("HendelarStatus");
+        hendlarStatus.innerText = "Hello codewithashim";
+      }
+
+      // method 2 ========================
+      document
+        .getElementById("event_litenar")
+        .addEventListener("click", function () {
+          const handel_Even_Status = document.getElementById("heandelStatus");
+          handel_Even_Status.innerText = "Hendel By Codewithashim";
+        });
+
+      // method 2 ==========================
+
+      document.getElementById("update").addEventListener("click", function () {
+        const handel_Input_Status = document.getElementById("inputData");
+        const inputText = handel_Input_Status.value;
+
+        const p = document.getElementById("input_text");
+        p.innerText = inputText;
+      });
+    </script>
+  </body>
+</html>

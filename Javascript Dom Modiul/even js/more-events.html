@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More even</title>
+  </head>
+  <body>
+    <h1 id="moreEvents">More Event</h1>
+    <button id="btn_moreEvent">Events</button>
+    <input type="text" id="TextFild" />
+
+    <script>
+      document
+        .getElementById("btn_moreEvent")
+        .addEventListener("mousemove", function () {
+          const moreEvents = document.getElementById("moreEvents");
+          moreEvents.innerText = "hello coder";
+        });
+
+      document
+        .getElementById("TextFild")
+        .addEventListener("focus", function () {
+          console.log("even focus");
+        });
+
+      document.getElementById("TextFild").addEventListener("blur", function () {
+        console.log("even blure");
+      });
+
+      document
+        .getElementById("TextFild")
+        .addEventListener("keydown", function () {
+          console.log(event.target);
+        });
+
+      document
+        .getElementById("TextFild")
+        .addEventListener("keypress", function () {
+          console.log("even focus");
+        });
+
+      document
+        .getElementById("TextFild")
+        .addEventListener("keyup", function () {
+          console.log("even focus");
+        });
+    </script>
+  </body>
+</html>
